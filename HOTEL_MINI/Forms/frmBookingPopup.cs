@@ -281,30 +281,6 @@ namespace HOTEL_MINI.Forms
             cbxGender.Visible = true;
             cbxGender.SelectedIndex = -1; // Reset selection
         }
-        //private void clickBtnCheckExistCCCDAgain()
-        //{
-        //    _customer = null;
-        //    txtTen.Clear();
-        //    txtDiachi.Clear();
-        //    txtEmail.Clear();
-        //    txtSDT.Clear();
-        //    txtGender.Clear();
-        //}
-        //private void addNewCustomer(Customer customer)
-        //{
-        //    var customerResult = _customerService.addNewCustomer(customer);
-        //    if (customerResult != null)
-        //    {
-        //        MessageBox.Show("User added successfully.");
-        //        _customer = customerResult;
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Failed to add user.");
-        //        return;
-        //    }
-        //}
         private void addNewCustomer(Customer customer)
         {
             // Lấy gender từ combobox nếu khách mới

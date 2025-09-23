@@ -63,8 +63,7 @@ namespace HOTEL_MINI.Forms
             txtNote.ReadOnly = true;    
             if (_booking.CheckOutDate == null)
             {
-                //dtpCheckoutTime.Value = DateTime.Now;
-                //dtpCheckoutTime.Enabled = true;
+ 
                 dtpCheckoutTime.Visible = false;
                 lblCHECKOUT.Visible = false;
             }
@@ -72,7 +71,7 @@ namespace HOTEL_MINI.Forms
             {
                 dtpCheckoutTime.Value = _booking.CheckOutDate.Value;
             }
-            //dtpCheckoutTime.Value = _booking.CheckOutDate.HasValue ? _booking.CheckInDate.Value : DateTime.Now;
+ 
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -155,14 +154,7 @@ namespace HOTEL_MINI.Forms
             btnReduce.Enabled = false;
         }
 
-        //private Service GetSelectedService()
-        //{
-        //    if (dgvHotelServices.CurrentRow != null)
-        //    {
-        //        return dgvHotelServices.CurrentRow.DataBoundItem as Service;
-        //    }
-        //    return null;
-        //}
+ 
 
         private void dgvHotelServices_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -180,8 +172,7 @@ namespace HOTEL_MINI.Forms
             {
                 var selectedService = (Service)dgvHotelServices.Rows[e.RowIndex].DataBoundItem;
 
-                // Gán vào label, numericUpDown,...
-                //lblAddQuantity.Text = $"Dịch vụ: {selectedService.ServiceName}";
+                
                 nbrIncrease.Value = 1;
 
                 lblAddQuantity.Enabled = true;
@@ -232,8 +223,7 @@ namespace HOTEL_MINI.Forms
             {
                 var selectedService = (UsedServiceDto)dgvUsedServices.Rows[e.RowIndex].DataBoundItem;
 
-                // Gán vào label, numericUpDown,...
-                //lblAddQuantity.Text = $"Dịch vụ: {selectedService.ServiceName}";
+ 
                 nbrReduce.Value = 1;
 
                 lblReduceQuantity.Enabled = true;
@@ -311,8 +301,7 @@ namespace HOTEL_MINI.Forms
                 }
                 else
                 {
-                    //MessageBox.Show($"Mở phòng {_room.RoomNumber}!");
-                    // Chưa có giờ checkout, mở form chọn giờ trước
+                     
                     OpenCheckoutTimeForm();
                 }
             }
@@ -338,8 +327,7 @@ namespace HOTEL_MINI.Forms
                     MessageBox.Show("Trả phòng thành công!", "Thành công",
                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Gọi method refresh lại danh sách phòng ở form chính
-                    //_form1.RefreshRoomList();
+                     
 
                     _form1.OpenChildForm(new frmRoom(_form1), btnClose);
                     this.Close();
@@ -366,10 +354,6 @@ namespace HOTEL_MINI.Forms
                             // Checkout thành công - cập nhật UI
                             MessageBox.Show("Trả phòng thành công!", "Thành công",
                                           MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Gọi method refresh lại danh sách phòng ở form chính
-                            //_form1.RefreshRoomList();
-
                             _form1.OpenChildForm(new frmRoom(_form1), btnClose);
                             this.Close();
                         }

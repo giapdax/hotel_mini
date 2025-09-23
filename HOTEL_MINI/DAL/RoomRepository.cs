@@ -195,7 +195,6 @@ namespace HOTEL_MINI.DAL
                         PricingType = pricingType,
                         Price = sqlDataReader.GetDecimal(1)
                     };
-                    //pricingID = sqlDataReader.GetInt32(0);
                 }
             }
             return null;

@@ -30,7 +30,6 @@ namespace HOTEL_MINI.BLL
             return _serviceRepository.UpdateService(service);
         }
 
-        // Giữ 1 hàm DUY NHẤT để cập nhật số lượng
         public bool UpdateServiceQuantity(int serviceId, int quantity)
         {
             if (quantity < 0)

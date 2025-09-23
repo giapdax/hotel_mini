@@ -57,7 +57,7 @@ namespace HOTEL_MINI.DAL
                 }
             }
 
-            return null; // nếu insert thất bại
+            return null; 
         }
 
         public Customer GetCustomerByIDNumber(string idNumber)
@@ -70,7 +70,7 @@ namespace HOTEL_MINI.DAL
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    if (reader.Read())   // chỉ cần gọi 1 lần
+                    if (reader.Read())    
                     {
                         return new Customer
                         {
@@ -98,7 +98,7 @@ namespace HOTEL_MINI.DAL
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    if (reader.Read())   // chỉ cần gọi 1 lần
+                    if (reader.Read())    
                     {
                         return new Customer
                         {
@@ -125,7 +125,7 @@ namespace HOTEL_MINI.DAL
                 cmd.Parameters.AddWithValue("@IDNumber", numberID);
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    if (reader.Read())   // chỉ cần gọi 1 lần
+                    if (reader.Read())   
                     {
                         return new Customer
                         {
@@ -192,14 +192,14 @@ namespace HOTEL_MINI.DAL
             {
                 conn.Open();
                 string sql = @"
-UPDATE Customers SET
-    FullName = @FullName,
-    Gender   = @Gender,
-    Phone    = @Phone,
-    Email    = @Email,
-    Address  = @Address,
-    IDNumber = @IDNumber
-WHERE CustomerID = @CustomerID";
+                    UPDATE Customers SET
+                        FullName = @FullName,
+                        Gender   = @Gender,
+                        Phone    = @Phone,
+                        Email    = @Email,
+                        Address  = @Address,
+                        IDNumber = @IDNumber
+                    WHERE CustomerID = @CustomerID";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
@@ -217,7 +217,7 @@ WHERE CustomerID = @CustomerID";
             }
         }
 
-        public List<string> getAllGender() //hàm này để lấy toàn bộ giưới tính trong bảng GenderEnum với cột Value
+        public List<string> getAllGender()  
         {
             List<string> listGender = new List<string>();
             using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -240,7 +240,7 @@ WHERE CustomerID = @CustomerID";
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                // Nếu muốn chỉ đếm booking hợp lệ thì thêm WHERE Status <> 'Cancelled' tùy schema của bạn
+                
                 string sql = @"SELECT CustomerID, COUNT(*) AS Cnt 
                        FROM Bookings 
                        GROUP BY CustomerID";

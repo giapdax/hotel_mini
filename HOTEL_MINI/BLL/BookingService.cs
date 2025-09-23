@@ -60,7 +60,7 @@ namespace HOTEL_MINI.BLL
             if (!booking.CheckInDate.HasValue)
                 throw new Exception("Booking chưa có CheckInDate.");
 
-            // --- Hourly ---
+ 
             if (string.Equals(pricing.PricingType, "Hourly", StringComparison.OrdinalIgnoreCase))
             {
                 if (!booking.CheckOutDate.HasValue)
@@ -77,7 +77,7 @@ namespace HOTEL_MINI.BLL
                 return roundedHours * pricing.Price;
             }
 
-            // --- Các loại khác (Nightly, Weekly, ...) ---
+  
             return pricing.Price;
         }
         public List<BookingDisplay> GetBookingDisplaysByCustomerNumber(string numberID)
@@ -152,53 +152,5 @@ namespace HOTEL_MINI.BLL
         {
             return _bookingRepository.CancelBooking(bookingID);
         }
-        //public void Checkout(Booking booking, decimal surcharge, decimal discount, string paymentMethod, int currentUserId)
-        //{
-        //    if (booking.CheckOutDate == null)
-        //    {
-        //        booking.CheckOutDate = DateTime.Now;
-        //    }
-
-        //    // Tính room charge & service charge
-        //    decimal roomCharge = GetRoomCharge(booking);
-        //    decimal serviceCharge = GetUsedServicesByBookingID(booking.BookingID).Sum(s => s.Total);
-
-        //    decimal totalAmount = roomCharge + serviceCharge + surcharge - discount;
-        //    if (totalAmount < 0) totalAmount = 0;
-
-        //    // Tạo invoice
-        //    var invoice = new Invoice
-        //    {
-        //        BookingID = booking.BookingID,
-        //        RoomCharge = roomCharge,
-        //        ServiceCharge = serviceCharge,
-        //        ExtraFee = surcharge,
-        //        Discount = discount,
-        //        TotalAmount = totalAmount,
-        //        IssuedAt = DateTime.Now,
-        //        IssuedBy = currentUserId,
-        //        Status = "Unpaid",
-        //        Note = ""
-        //    };
-        //    int invoiceId = _invoiceRepository.AddInvoice(invoice);
-
-        //    // Tạo payment
-        //    var payment = new Payment
-        //    {
-        //         = invoiceId,
-        //        Amount = totalAmount,
-        //        PaymentDate = DateTime.Now,
-        //        Method = paymentMethod,
-        //        Status = "Completed"
-        //    };
-        //    _paymentRepo.AddPayment(payment);
-
-        //    // Cập nhật trạng thái booking
-        //    booking.Status = "CheckedOut";
-        //    _bookingRepo.UpdateBooking(booking);
-
-        //    // Cập nhật trạng thái phòng
-        //    _roomService.UpdateRoomStatus(booking.RoomID, "Available");
-        //}
     }
 }

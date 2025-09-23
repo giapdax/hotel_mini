@@ -167,7 +167,7 @@ namespace HOTEL_MINI.DAL
         }
         public DataTable GetRevenueByCurrentWeek()
         {
-            // Tính ngày bắt đầu và kết thúc của tuần hiện tại (Thứ 2 đến Chủ nhật)
+         
             DateTime today = DateTime.Today;
             int daysSinceMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
             DateTime startOfWeek = today.AddDays(-daysSinceMonday);

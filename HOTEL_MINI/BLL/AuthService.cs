@@ -39,7 +39,7 @@ namespace HOTEL_MINI.BLL
                     };
                 }
 
-                // Cập nhật lại điều kiện kiểm tra trạng thái
+ 
                 if (user.Status == UserStatus.Inactive || user.Status == UserStatus.Blocked)
                 {
                     return new LoginResult

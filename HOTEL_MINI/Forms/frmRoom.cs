@@ -40,10 +40,7 @@ namespace HOTEL_MINI.Forms
         {
             btnResetFilter.PerformClick();
         }
-        //public List<RoomPricing> GetRoomPricingsByRoomType(int roomTypeId)
-        //{
-        //    return _roomPricingService.GetByRoomType(roomTypeId);
-        //}
+
         public void LoadRoom(string status, string searchText, RoomTypes selectedRoomType)
         {
             flpAllRooms.Controls.Clear();
