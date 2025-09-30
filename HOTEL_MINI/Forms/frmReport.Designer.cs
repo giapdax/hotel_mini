@@ -34,15 +34,14 @@ namespace HOTEL_MINI.Forms
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.rpvCustomer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabRevenuRoom = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.rpvRevenuRoom = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabInvoice = new System.Windows.Forms.TabPage();
             this.rpvInvoice = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabCustomerReport.SuspendLayout();
             this.tabCustomer.SuspendLayout();
             this.tabRevenuRoom.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabInvoice.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +80,8 @@ namespace HOTEL_MINI.Forms
             // 
             // tabRevenuRoom
             // 
-            this.tabRevenuRoom.Controls.Add(this.panel1);
+            this.tabRevenuRoom.Controls.Add(this.label1);
+            this.tabRevenuRoom.Controls.Add(this.dateTimePicker1);
             this.tabRevenuRoom.Controls.Add(this.rpvRevenuRoom);
             this.tabRevenuRoom.Location = new System.Drawing.Point(4, 29);
             this.tabRevenuRoom.Name = "tabRevenuRoom";
@@ -91,25 +91,16 @@ namespace HOTEL_MINI.Forms
             this.tabRevenuRoom.Text = "Revenu Room";
             this.tabRevenuRoom.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(949, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(303, 721);
-            this.panel1.TabIndex = 1;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.CustomFormat = "MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 85);
+            this.dateTimePicker1.Location = new System.Drawing.Point(158, 51);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(298, 53);
+            this.dateTimePicker1.Size = new System.Drawing.Size(298, 39);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -144,6 +135,16 @@ namespace HOTEL_MINI.Forms
             this.rpvInvoice.Size = new System.Drawing.Size(1249, 721);
             this.rpvInvoice.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Chọn thời gian:";
+            // 
             // frmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -151,12 +152,12 @@ namespace HOTEL_MINI.Forms
             this.ClientSize = new System.Drawing.Size(1263, 760);
             this.Controls.Add(this.tabCustomerReport);
             this.Name = "frmReport";
-            this.Text = "frmReport";
+            this.Text = "Báo Cáo";
             this.Load += new System.EventHandler(this.frmReport_Load);
             this.tabCustomerReport.ResumeLayout(false);
             this.tabCustomer.ResumeLayout(false);
             this.tabRevenuRoom.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.tabRevenuRoom.PerformLayout();
             this.tabInvoice.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -171,7 +172,7 @@ namespace HOTEL_MINI.Forms
         private Microsoft.Reporting.WinForms.ReportViewer rpvInvoice;
         private System.Windows.Forms.TabPage tabRevenuRoom;
         private Microsoft.Reporting.WinForms.ReportViewer rpvRevenuRoom;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Label label1;
     }
 }

@@ -65,12 +65,9 @@ namespace HOTEL_MINI.DAL
                 }
             }
         }
-         
-
         public bool AddRoomType(RoomTypes roomType)
         {
-            const string query =
-                "INSERT INTO RoomTypes (TypeName, Description) " +
+            const string query ="INSERT INTO RoomTypes (TypeName, Description) " +
                 "VALUES (@TypeName, @Description)";
 
             using (var connection = CreateConnection())
@@ -86,8 +83,7 @@ namespace HOTEL_MINI.DAL
 
         public bool UpdateRoomType(RoomTypes roomType)
         {
-            const string query =
-                "UPDATE RoomTypes SET TypeName=@TypeName, Description=@Description " +
+            const string query ="UPDATE RoomTypes SET TypeName=@TypeName, Description=@Description " +
                 "WHERE RoomTypeID=@RoomTypeID";
 
             using (var connection = CreateConnection())
@@ -102,18 +98,5 @@ namespace HOTEL_MINI.DAL
             }
         }
 
-        public bool DeleteRoomType(int roomTypeId)
-        {
-            const string query = "DELETE FROM RoomTypes WHERE RoomTypeID=@RoomTypeID";
-
-            using (var connection = CreateConnection())
-            using (var command = new SqlCommand(query, connection))
-            {
-                command.Parameters.AddWithValue("@RoomTypeID", roomTypeId);
-
-                connection.Open();
-                return command.ExecuteNonQuery() > 0;
-            }
-        }
     }
 }

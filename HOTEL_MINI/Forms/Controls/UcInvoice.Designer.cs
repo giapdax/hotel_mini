@@ -95,10 +95,11 @@
             this.panel1.Controls.Add(this.lblTotalAmount);
             this.panel1.Controls.Add(this.lblIssuedBy);
             this.panel1.Controls.Add(this.lblPaymentMethod);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(629, 943);
+            this.panel1.MinimumSize = new System.Drawing.Size(629, 943);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(648, 1116);
+            this.panel1.Size = new System.Drawing.Size(629, 943);
             this.panel1.TabIndex = 0;
             // 
             // txtCusId
@@ -113,16 +114,16 @@
             // 
             this.lblIdNumber.AutoSize = true;
             this.lblIdNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdNumber.Location = new System.Drawing.Point(20, 136);
+            this.lblIdNumber.Location = new System.Drawing.Point(20, 133);
             this.lblIdNumber.Name = "lblIdNumber";
-            this.lblIdNumber.Size = new System.Drawing.Size(104, 25);
+            this.lblIdNumber.Size = new System.Drawing.Size(82, 25);
             this.lblIdNumber.TabIndex = 51;
-            this.lblIdNumber.Text = "Căn cước";
+            this.lblIdNumber.Text = "CCCD:";
             // 
             // txtCusName
             // 
             this.txtCusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusName.Location = new System.Drawing.Point(147, 87);
+            this.txtCusName.Location = new System.Drawing.Point(148, 87);
             this.txtCusName.Name = "txtCusName";
             this.txtCusName.Size = new System.Drawing.Size(455, 35);
             this.txtCusName.TabIndex = 50;
@@ -131,18 +132,18 @@
             // 
             this.lblCusName.AutoSize = true;
             this.lblCusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusName.Location = new System.Drawing.Point(13, 97);
+            this.lblCusName.Location = new System.Drawing.Point(13, 87);
             this.lblCusName.Name = "lblCusName";
-            this.lblCusName.Size = new System.Drawing.Size(128, 25);
+            this.lblCusName.Size = new System.Drawing.Size(135, 25);
             this.lblCusName.TabIndex = 49;
-            this.lblCusName.Text = "Khách hàng";
+            this.lblCusName.Text = "Khách hàng:";
             this.lblCusName.Click += new System.EventHandler(this.lblCusName_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(257, 21);
+            this.label4.Location = new System.Drawing.Point(267, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 37);
             this.label4.TabIndex = 48;
@@ -151,25 +152,25 @@
             // txtPaymentMethod
             // 
             this.txtPaymentMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaymentMethod.Location = new System.Drawing.Point(149, 836);
+            this.txtPaymentMethod.Location = new System.Drawing.Point(148, 760);
             this.txtPaymentMethod.Name = "txtPaymentMethod";
             this.txtPaymentMethod.Size = new System.Drawing.Size(191, 35);
             this.txtPaymentMethod.TabIndex = 47;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(237, 1012);
+            this.btnBack.Location = new System.Drawing.Point(348, 877);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 66);
+            this.btnBack.Size = new System.Drawing.Size(67, 38);
             this.btnBack.TabIndex = 46;
             this.btnBack.Text = "Trở lại";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
             // btnExportInvoice
             // 
-            this.btnExportInvoice.Location = new System.Drawing.Point(405, 1012);
+            this.btnExportInvoice.Location = new System.Drawing.Point(437, 878);
             this.btnExportInvoice.Name = "btnExportInvoice";
-            this.btnExportInvoice.Size = new System.Drawing.Size(84, 66);
+            this.btnExportInvoice.Size = new System.Drawing.Size(81, 37);
             this.btnExportInvoice.TabIndex = 45;
             this.btnExportInvoice.Text = "Export";
             this.btnExportInvoice.UseVisualStyleBackColor = true;
@@ -204,7 +205,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 223);
+            this.label2.Location = new System.Drawing.Point(27, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 25);
             this.label2.TabIndex = 41;
@@ -217,7 +218,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(148, 310);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(455, 342);
+            this.panel2.Size = new System.Drawing.Size(454, 269);
             this.panel2.TabIndex = 39;
             // 
             // dgvUsedService
@@ -228,7 +229,7 @@
             this.dgvUsedService.Name = "dgvUsedService";
             this.dgvUsedService.RowHeadersWidth = 62;
             this.dgvUsedService.RowTemplate.Height = 28;
-            this.dgvUsedService.Size = new System.Drawing.Size(453, 295);
+            this.dgvUsedService.Size = new System.Drawing.Size(452, 221);
             this.dgvUsedService.TabIndex = 1;
             // 
             // panel3
@@ -236,16 +237,16 @@
             this.panel3.Controls.Add(this.txtServiceCharge);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 295);
+            this.panel3.Location = new System.Drawing.Point(0, 221);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(453, 45);
+            this.panel3.Size = new System.Drawing.Size(452, 46);
             this.panel3.TabIndex = 0;
             // 
             // txtServiceCharge
             // 
             this.txtServiceCharge.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtServiceCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServiceCharge.Location = new System.Drawing.Point(237, 0);
+            this.txtServiceCharge.Location = new System.Drawing.Point(236, 0);
             this.txtServiceCharge.Name = "txtServiceCharge";
             this.txtServiceCharge.Size = new System.Drawing.Size(216, 44);
             this.txtServiceCharge.TabIndex = 1;
@@ -267,16 +268,16 @@
             // txtNote
             // 
             this.txtNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.Location = new System.Drawing.Point(150, 882);
+            this.txtNote.Location = new System.Drawing.Point(148, 805);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(455, 111);
+            this.txtNote.Size = new System.Drawing.Size(455, 66);
             this.txtNote.TabIndex = 38;
             // 
             // txtEmployeeName
             // 
             this.txtEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.Location = new System.Drawing.Point(150, 795);
+            this.txtEmployeeName.Location = new System.Drawing.Point(148, 718);
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.Size = new System.Drawing.Size(452, 35);
             this.txtEmployeeName.TabIndex = 37;
@@ -284,7 +285,7 @@
             // txtTotalAmount
             // 
             this.txtTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalAmount.Location = new System.Drawing.Point(150, 754);
+            this.txtTotalAmount.Location = new System.Drawing.Point(148, 677);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Size = new System.Drawing.Size(452, 35);
             this.txtTotalAmount.TabIndex = 36;
@@ -292,7 +293,7 @@
             // txtDiscount
             // 
             this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.Location = new System.Drawing.Point(150, 700);
+            this.txtDiscount.Location = new System.Drawing.Point(149, 636);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(452, 35);
             this.txtDiscount.TabIndex = 35;
@@ -300,7 +301,7 @@
             // txtSurcharge
             // 
             this.txtSurcharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurcharge.Location = new System.Drawing.Point(149, 659);
+            this.txtSurcharge.Location = new System.Drawing.Point(150, 595);
             this.txtSurcharge.Name = "txtSurcharge";
             this.txtSurcharge.Size = new System.Drawing.Size(453, 35);
             this.txtSurcharge.TabIndex = 34;
@@ -317,7 +318,7 @@
             // 
             this.lblNote.AutoSize = true;
             this.lblNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNote.Location = new System.Drawing.Point(20, 882);
+            this.lblNote.Location = new System.Drawing.Point(38, 811);
             this.lblNote.Name = "lblNote";
             this.lblNote.Size = new System.Drawing.Size(86, 25);
             this.lblNote.TabIndex = 32;
@@ -327,7 +328,7 @@
             // 
             this.lblRoomCharge.AutoSize = true;
             this.lblRoomCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomCharge.Location = new System.Drawing.Point(20, 174);
+            this.lblRoomCharge.Location = new System.Drawing.Point(13, 174);
             this.lblRoomCharge.Name = "lblRoomCharge";
             this.lblRoomCharge.Size = new System.Drawing.Size(121, 25);
             this.lblRoomCharge.TabIndex = 25;
@@ -347,7 +348,7 @@
             // 
             this.lblSurcharge.AutoSize = true;
             this.lblSurcharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurcharge.Location = new System.Drawing.Point(26, 659);
+            this.lblSurcharge.Location = new System.Drawing.Point(39, 601);
             this.lblSurcharge.Name = "lblSurcharge";
             this.lblSurcharge.Size = new System.Drawing.Size(85, 25);
             this.lblSurcharge.TabIndex = 27;
@@ -357,7 +358,7 @@
             // 
             this.lblDiscount.AutoSize = true;
             this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(20, 706);
+            this.lblDiscount.Location = new System.Drawing.Point(39, 642);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(97, 25);
             this.lblDiscount.TabIndex = 28;
@@ -367,7 +368,7 @@
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(14, 760);
+            this.lblTotalAmount.Location = new System.Drawing.Point(33, 687);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(103, 25);
             this.lblTotalAmount.TabIndex = 29;
@@ -377,7 +378,7 @@
             // 
             this.lblIssuedBy.AutoSize = true;
             this.lblIssuedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIssuedBy.Location = new System.Drawing.Point(14, 805);
+            this.lblIssuedBy.Location = new System.Drawing.Point(27, 724);
             this.lblIssuedBy.Name = "lblIssuedBy";
             this.lblIssuedBy.Size = new System.Drawing.Size(109, 25);
             this.lblIssuedBy.TabIndex = 30;
@@ -387,7 +388,7 @@
             // 
             this.lblPaymentMethod.AutoSize = true;
             this.lblPaymentMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentMethod.Location = new System.Drawing.Point(20, 842);
+            this.lblPaymentMethod.Location = new System.Drawing.Point(33, 760);
             this.lblPaymentMethod.Name = "lblPaymentMethod";
             this.lblPaymentMethod.Size = new System.Drawing.Size(103, 25);
             this.lblPaymentMethod.TabIndex = 31;
@@ -398,10 +399,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(648, 1116);
-            this.MinimumSize = new System.Drawing.Size(648, 1116);
             this.Name = "UcInvoice";
-            this.Size = new System.Drawing.Size(648, 1116);
+            this.Size = new System.Drawing.Size(629, 943);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
