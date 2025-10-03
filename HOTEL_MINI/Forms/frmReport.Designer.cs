@@ -34,11 +34,11 @@ namespace HOTEL_MINI.Forms
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.rpvCustomer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabRevenuRoom = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.rpvRevenuRoom = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabInvoice = new System.Windows.Forms.TabPage();
             this.rpvInvoice = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabCustomerReport.SuspendLayout();
             this.tabCustomer.SuspendLayout();
             this.tabRevenuRoom.SuspendLayout();
@@ -91,6 +91,16 @@ namespace HOTEL_MINI.Forms
             this.tabRevenuRoom.Text = "Revenu Room";
             this.tabRevenuRoom.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Chọn thời gian:";
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,16 +144,6 @@ namespace HOTEL_MINI.Forms
             this.rpvInvoice.ServerReport.BearerToken = null;
             this.rpvInvoice.Size = new System.Drawing.Size(1249, 721);
             this.rpvInvoice.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Chọn thời gian:";
             // 
             // frmReport
             // 
